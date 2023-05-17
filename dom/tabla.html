@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>tabla</title>
+</head>
+<body>
+<table class="table" id="tabla">
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Nombre</th>
+<th scope="col">Last</th>
+<th scope="col">HandleR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">1</th>
+<td>
+<input
+type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese el nombre" aria-label="nombre" aria-describedby="basic-addon1" />
+</td>
+<td>
+<input
+type="text" id="apellido" name="apellido" class="form-control" placeholder="Ingrese el apellido" aria-label="apellido" aria-describedby="basic-addon1" />
+</td>
+<td>
+<input
+type="date" id="edad" name="edad" class="form-control" placeholder="Ingrese la edad" aria-label="apellido" aria-describedby="basic-addon1" />
+</td>
+</tr>
+<tr>
+<th scope="row">1</th> <td>
+<input
+type="text" id="nombre2" name="nombre" class="form-control" placeholder="Ingrese el nombre" aria-label="nombre" aria-describedby="basic-addon1" />
+</td>
+<td>
+<input
+type="text" id="apellido2" name="apellido" class="form-control" placeholder="Ingrese el apellido" aria-label="apellido" aria-describedby="basic-addon1" />
+</td>
+<td>
+<input
+type="date" id="edad2" name="edad" class="form-control" placeholder="Ingrese la edad" aria-label="apellido" aria-describedby="basic-addon1" />
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+
+
+<script type="text/javascript">
+
+	window.onload=function(){
+		seryalizeInputs();
+	}
+	
+	function seryalizeInputs() {
+		// body... 
+		//inputs[0].value;
+		//const inputs = document.querySelectorAll("input");
+		/*
+	    	    inputs.forEach((element, i) => {
+	    	console.log("input[" + i + "]: " + element.id);
+	  	});
+
+		*/
+
+		let tabla, inputs, arr;
+	    tabla = document.getElementById('tabla');
+	    inputs = tabla.querySelectorAll('input');
+
+		arr = [].slice.call( inputs ).map(function ( node ) {
+	        return node.id; 
+	    });
+
+	    console.log(arr);
+	    
+	  	console.log("El primer input es: " + inputs[0].id);
+
+	}
+
+</script>
+</html>
